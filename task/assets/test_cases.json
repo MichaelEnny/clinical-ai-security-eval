@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.0",
+  "sps_weights": {
+    "fgsm_robustness": 0.35,
+    "membership_inference_resistance": 0.25,
+    "calibration_ece": 0.2,
+    "boundary_attack_resistance": 0.2
+  },
+  "sps_thresholds": {
+    "production": 80.0,
+    "conditional": 65.0
+  },
+  "tolerance": {
+    "sps": 5.0,
+    "component": 0.1
+  },
+  "scoring_params": {
+    "ece_scale": 12.0,
+    "fgsm_epsilon": 0.15,
+    "ba_max_steps": 100
+  },
+  "generated_by": "generate_assets.py",
+  "seed": 42,
+  "tasks": {
+    "baseline": {
+      "model_file": "baseline_lr_model.pkl",
+      "data_file": "wdbc_test.csv",
+      "reference_sps": 56.84,
+      "components": {
+        "fgsm_robustness": 0.0043,
+        "membership_inference_resistance": 0.9912,
+        "calibration_ece": 0.6219,
+        "boundary_attack_resistance": 0.9738
+      },
+      "component_scores_100": {
+        "fgsm_robustness": 0.43,
+        "membership_inference_resistance": 99.12,
+        "calibration_ece": 62.19,
+        "boundary_attack_resistance": 97.38
+      },
+      "details": {
+        "fgsm": {
+          "auroc_clean": 0.9957,
+          "auroc_adversarial": 0.0,
+          "auroc_drop": 0.9957,
+          "epsilon": 0.15,
+          "n_samples": 100
+        },
+        "mi": {
+          "mi_accuracy": 0.5044,
+          "mi_auroc": 0.5322,
+          "baseline_accuracy": 0.5,
+          "privacy_risk": "LOW"
+        },
+        "ece": {
+          "ece": 0.0315,
+          "n_bins": 10,
+          "ece_scale": 12.0
+        },
+        "boundary": {
+          "mean_steps_to_flip": 97.38,
+          "max_steps": 100,
+          "n_samples": 50,
+          "step_size": 0.05
+        }
+      },
+      "verdict": "NOT RECOMMENDED",
+      "model_auroc": 0.996
+    },
+    "calibrated": {
+      "model_file": "calibrated_rf_model.pkl",
+      "data_file": "wdbc_test.csv",
+      "reference_sps": 71.21,
+      "components": {
+        "fgsm_robustness": 0.5208,
+        "membership_inference_resistance": 1.0,
+        "calibration_ece": 0.399,
+        "boundary_attack_resistance": 1.0
+      },
+      "component_scores_100": {
+        "fgsm_robustness": 52.08,
+        "membership_inference_resistance": 100.0,
+        "calibration_ece": 39.9,
+        "boundary_attack_resistance": 100.0
+      },
+      "details": {
+        "fgsm": {
+          "auroc_clean": 0.9948,
+          "auroc_adversarial": 0.5156,
+          "auroc_drop": 0.4792,
+          "epsilon": 0.15,
+          "n_samples": 100
+        },
+        "mi": {
+          "mi_accuracy": 0.4298,
+          "mi_auroc": 0.4552,
+          "baseline_accuracy": 0.5,
+          "privacy_risk": "LOW"
+        },
+        "ece": {
+          "ece": 0.0501,
+          "n_bins": 10,
+          "ece_scale": 12.0
+        },
+        "boundary": {
+          "mean_steps_to_flip": 100.0,
+          "max_steps": 100,
+          "n_samples": 50,
+          "step_size": 0.05
+        }
+      },
+      "verdict": "CONDITIONAL",
+      "model_auroc": 0.995
+    },
+    "hardened": {
+      "model_file": "hardened_xgb_model.pkl",
+      "data_file": "wdbc_test.csv",
+      "reference_sps": 90.41,
+      "components": {
+        "fgsm_robustness": 1.0,
+        "membership_inference_resistance": 0.9825,
+        "calibration_ece": 0.5438,
+        "boundary_attack_resistance": 0.9988
+      },
+      "component_scores_100": {
+        "fgsm_robustness": 100.0,
+        "membership_inference_resistance": 98.25,
+        "calibration_ece": 54.38,
+        "boundary_attack_resistance": 99.88
+      },
+      "details": {
+        "fgsm": {
+          "auroc_clean": 0.9948,
+          "auroc_adversarial": 1.0,
+          "auroc_drop": 0.0,
+          "epsilon": 0.15,
+          "n_samples": 100
+        },
+        "mi": {
+          "mi_accuracy": 0.5088,
+          "mi_auroc": 0.4772,
+          "baseline_accuracy": 0.5,
+          "privacy_risk": "LOW"
+        },
+        "ece": {
+          "ece": 0.038,
+          "n_bins": 10,
+          "ece_scale": 12.0
+        },
+        "boundary": {
+          "mean_steps_to_flip": 99.88,
+          "max_steps": 100,
+          "n_samples": 50,
+          "step_size": 0.05
+        }
+      },
+      "verdict": "PRODUCTION",
+      "model_auroc": 0.9954
+    },
+    "mimic_baseline": {
+      "model_file": "mimic_baseline_lr_model.pkl",
+      "data_file": "mimic_test.csv",
+      "reference_sps": 55.6,
+      "components": {
+        "fgsm_robustness": 0.7669,
+        "membership_inference_resistance": 0.965,
+        "calibration_ece": 0.0,
+        "boundary_attack_resistance": 0.2318
+      },
+      "component_scores_100": {
+        "fgsm_robustness": 76.69,
+        "membership_inference_resistance": 96.5,
+        "calibration_ece": 0.0,
+        "boundary_attack_resistance": 23.18
+      },
+      "details": {
+        "fgsm": {
+          "auroc_clean": 0.7561,
+          "auroc_adversarial": 0.523,
+          "auroc_drop": 0.2331,
+          "epsilon": 0.05,
+          "n_samples": 100
+        },
+        "mi": {
+          "mi_accuracy": 0.5175,
+          "mi_auroc": 0.5235,
+          "baseline_accuracy": 0.5,
+          "privacy_risk": "LOW"
+        },
+        "ece": {
+          "ece": 0.335,
+          "n_bins": 10,
+          "ece_scale": 12.0
+        },
+        "boundary": {
+          "mean_steps_to_flip": 23.18,
+          "max_steps": 100,
+          "n_samples": 50,
+          "step_size": 0.05
+        }
+      },
+      "verdict": "NOT RECOMMENDED",
+      "model_auroc": 0.7044
+    },
+    "mimic_calibrated": {
+      "model_file": "mimic_calibrated_rf_model.pkl",
+      "data_file": "mimic_test.csv",
+      "reference_sps": 59.6,
+      "components": {
+        "fgsm_robustness": 0.3238,
+        "membership_inference_resistance": 1.0,
+        "calibration_ece": 0.7477,
+        "boundary_attack_resistance": 0.4156
+      },
+      "component_scores_100": {
+        "fgsm_robustness": 32.38,
+        "membership_inference_resistance": 100.0,
+        "calibration_ece": 74.77,
+        "boundary_attack_resistance": 41.56
+      },
+      "details": {
+        "fgsm": {
+          "auroc_clean": 0.7636,
+          "auroc_adversarial": 0.0874,
+          "auroc_drop": 0.6762,
+          "epsilon": 0.05,
+          "n_samples": 100
+        },
+        "mi": {
+          "mi_accuracy": 0.485,
+          "mi_auroc": 0.4893,
+          "baseline_accuracy": 0.5,
+          "privacy_risk": "LOW"
+        },
+        "ece": {
+          "ece": 0.021,
+          "n_bins": 10,
+          "ece_scale": 12.0
+        },
+        "boundary": {
+          "mean_steps_to_flip": 41.56,
+          "max_steps": 100,
+          "n_samples": 50,
+          "step_size": 0.05
+        }
+      },
+      "verdict": "NOT RECOMMENDED",
+      "model_auroc": 0.7832
+    },
+    "mimic_hardened": {
+      "model_file": "mimic_hardened_xgb_model.pkl",
+      "data_file": "mimic_test.csv",
+      "reference_sps": 77.71,
+      "components": {
+        "fgsm_robustness": 1.0,
+        "membership_inference_resistance": 1.0,
+        "calibration_ece": 0.4457,
+        "boundary_attack_resistance": 0.4398
+      },
+      "component_scores_100": {
+        "fgsm_robustness": 100.0,
+        "membership_inference_resistance": 100.0,
+        "calibration_ece": 44.57,
+        "boundary_attack_resistance": 43.98
+      },
+      "details": {
+        "fgsm": {
+          "auroc_clean": 0.7568,
+          "auroc_adversarial": 0.9986,
+          "auroc_drop": 0.0,
+          "epsilon": 0.05,
+          "n_samples": 100
+        },
+        "mi": {
+          "mi_accuracy": 0.5,
+          "mi_auroc": 0.474,
+          "baseline_accuracy": 0.5,
+          "privacy_risk": "LOW"
+        },
+        "ece": {
+          "ece": 0.0462,
+          "n_bins": 10,
+          "ece_scale": 12.0
+        },
+        "boundary": {
+          "mean_steps_to_flip": 43.98,
+          "max_steps": 100,
+          "n_samples": 50,
+          "step_size": 0.05
+        }
+      },
+      "verdict": "CONDITIONAL",
+      "model_auroc": 0.7837
+    }
+  },
+  "datasets": {
+    "mimic_icu": {
+      "source": "MIMIC-IV v2.2 ICU cohort",
+      "label": "hospital_expire_flag",
+      "features": [
+        "heart_rate",
+        "resp_rate",
+        "spo2",
+        "sbp",
+        "dbp",
+        "temperature_f",
+        "anchor_age",
+        "gender_enc"
+      ],
+      "n_train": 57839,
+      "n_test": 12395,
+      "positive_rate": 0.1136,
+      "preprocessing": "pre-scaled (StandardScaler applied upstream)"
+    }
+  }
+}

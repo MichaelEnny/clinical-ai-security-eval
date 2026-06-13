@@ -1,0 +1,38 @@
+# ── MIMIC-IV PhysioNet data (credentialed access required — do not redistribute) ──
+data/mimic/
+
+# MIMIC-derived assets in task container (built from PhysioNet data)
+task/assets/mimic_*.pkl
+task/assets/mimic_train.csv
+task/assets/mimic_test.csv
+
+# ── Workbench run artifacts (Docker build contexts contain copies of assets) ──
+task-standard/workbench/runs/
+task-standard/workbench/node_modules/
+
+# ── API keys and secrets ──
+.env
+.env.*
+*.key
+secrets/
+
+# ── Python ──
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+
+# ── Evaluation results (may contain model outputs derived from restricted data) ──
+evaluation/results/
+
+# ── OS / editor noise ──
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp

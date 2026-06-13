@@ -1,0 +1,18 @@
+tasks:
+  - taskFamilyName: clinical_ai_security_eval
+    taskName: baseline
+    vmSpec:
+      cpus: 2
+      ramGiB: 4
+
+  - taskFamilyName: clinical_ai_security_eval
+    taskName: calibrated
+    vmSpec:
+      cpus: 2
+      ramGiB: 4
+
+  - taskFamilyName: clinical_ai_security_eval
+    taskName: hardened
+    vmSpec:
+      cpus: 2
+      ramGiB: 4
