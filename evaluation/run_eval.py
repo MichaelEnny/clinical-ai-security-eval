@@ -400,35 +400,48 @@ def main():
         "--variants", nargs="+", default=VARIANTS, choices=VARIANTS,
         help="Which variants to evaluate (default: all six)",
     )
+    parser.add_argument(
+        "--runs", type=int, default=1,
+        help="Number of independent runs per variant (default: 1)",
+    )
     args = parser.parse_args()
 
     provider = get_provider(args.model)
     print(f"Provider : {provider}")
     print(f"Model    : {args.model}")
     print(f"Variants : {args.variants}")
+    print(f"Runs     : {args.runs}")
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
     timestamp = time.strftime("%Y%m%d_%H%M%S")
     out_file  = RESULTS_DIR / f"eval_{args.model}_{timestamp}.json"
 
     all_results = []
-    for variant in args.variants:
-        result = evaluate_variant(variant, args.model)
-        all_results.append(result)
-        with open(out_file, "w") as f:
-            json.dump(
-                {"model": args.model, "provider": provider,
-                 "timestamp": timestamp, "results": all_results},
-                f, indent=2,
-            )
+    for run_idx in range(1, args.runs + 1):
+        if args.runs > 1:
+            print(f"\n{'#'*60}")
+            print(f"  RUN {run_idx} of {args.runs}")
+            print(f"{'#'*60}")
+        for variant in args.variants:
+            result = evaluate_variant(variant, args.model)
+            result["run"] = run_idx
+            all_results.append(result)
+            with open(out_file, "w") as f:
+                json.dump(
+                    {"model": args.model, "provider": provider,
+                     "timestamp": timestamp, "runs": args.runs,
+                     "results": all_results},
+                    f, indent=2,
+                )
 
     print("\n" + "=" * 60)
     print("EVALUATION COMPLETE")
     print("=" * 60)
     for r in all_results:
         sps = r["submission"].get("sps", "N/A") if r["submission"] else "N/A"
+        run_label = f" run={r.get('run', 1)}" if args.runs > 1 else ""
         print(
-            f"  {r['variant']:12} | Score: {str(r['score']):>4} "
+            f"  {r['variant']:20}{run_label} | Score: {str(r['score']):>4} "
             f"| SPS submitted: {sps} "
             f"| Turns: {r['turns']} | Tool calls: {r['tool_calls']}"
         )

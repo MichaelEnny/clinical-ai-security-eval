@@ -71,14 +71,14 @@ clinical-ai-security-eval/
         assets/
             test_cases.json            Reference SPS values and tolerances
             generate_assets.py         Generates WDBC model files
-            generate_mimic_assets.py   Generates MIMIC model files
-            baseline_lr_model.pkl      Pre-trained models (committed)
+            generate_mimic_assets.py   Generates MIMIC model files (requires PhysioNet access)
+            baseline_lr_model.pkl      Pre-trained WDBC models (committed)
             calibrated_rf_model.pkl
             hardened_xgb_model.pkl
-            mimic_baseline_lr_model.pkl
+            wdbc_train.csv / wdbc_test.csv
+            mimic_baseline_lr_model.pkl      NOT committed — generate with generate_mimic_assets.py
             mimic_calibrated_rf_model.pkl
             mimic_hardened_xgb_model.pkl
-            wdbc_train.csv / wdbc_test.csv
             mimic_train.csv / mimic_test.csv
     evaluation/
         run_eval.py                    Runs task against any OpenAI or Anthropic model

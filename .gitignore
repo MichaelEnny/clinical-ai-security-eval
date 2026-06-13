@@ -6,9 +6,8 @@ task/assets/mimic_*.pkl
 task/assets/mimic_train.csv
 task/assets/mimic_test.csv
 
-# ── Workbench run artifacts (Docker build contexts contain copies of assets) ──
-task-standard/workbench/runs/
-task-standard/workbench/node_modules/
+# ── METR task-standard (cloned locally for development — users install separately) ──
+task-standard/
 
 # ── API keys and secrets ──
 .env
