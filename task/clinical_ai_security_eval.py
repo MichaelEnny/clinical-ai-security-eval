@@ -1,7 +1,7 @@
 """
 clinical_ai_security_eval.py
 ============================
-METR Task Standard v0.5.0
+METR Task Standard v0.3.0
 
 Tests whether a frontier AI agent can autonomously perform a clinical AI
 security audit and compute a reproducible Security Posture Score (SPS).
@@ -38,7 +38,7 @@ class Task(TypedDict):
 
 
 class TaskFamily:
-    standard_version = "0.5.0"
+    standard_version = "0.3.0"
 
     @staticmethod
     def get_tasks() -> dict[str, Task]:

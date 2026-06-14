@@ -1,6 +1,6 @@
 # clinical-ai-security-eval
 
-A METR Task Standard v0.5.0 evaluation task that tests whether frontier AI agents can autonomously audit clinical prediction models. The agent receives a pre-trained model, a patient dataset, and a written audit specification. It must implement four adversarial attacks, compute a weighted **Security Posture Score (SPS)**, and write a structured JSON report using only a bash tool inside a Docker container. No scaffolding code is provided.
+A METR Task Standard v0.3.0 evaluation task that tests whether frontier AI agents can autonomously audit clinical prediction models. The agent receives a pre-trained model, a patient dataset, and a written audit specification. It must implement four adversarial attacks, compute a weighted **Security Posture Score (SPS)**, and write a structured JSON report using only a bash tool inside a Docker container. No scaffolding code is provided.
 
 **Author:** Michael O. Eniolade, University of the Cumberlands  
 **Paper:** *Evaluating Frontier AI Agents as Autonomous Clinical Security Auditors* (arXiv preprint, June 2026)
@@ -65,10 +65,10 @@ Claude Sonnet 4.6 produced identical SPS values across all three runs on every v
 ```
 clinical-ai-security-eval/
     task/
-        clinical_ai_security_eval.py   TaskFamily class (METR Task Standard v0.5.0)
+        clinical_ai_security_eval.py   TaskFamily class (METR Task Standard v0.3.0)
         manifest.yaml                  Resource specs: 2 CPUs, 4 GiB RAM per variant
         requirements.txt               scikit-learn, xgboost, numpy, pandas, scipy
-        Dockerfile                     python:3.11-slim base, agent user, pip deps
+        Dockerfile                     python:3.13-slim base, agent user, pip deps
         assets/
             test_cases.json            Locked reference SPS + component values per variant
             generate_assets.py         Generates WDBC model files and test_cases.json
@@ -100,7 +100,7 @@ clinical-ai-security-eval/
 
 - Docker Desktop (Windows) or Docker Engine (Linux/macOS)
 - Node.js and npm
-- Python 3.11 or higher
+- Python 3.13 or higher
 
 ### One-Time Setup
 
@@ -331,7 +331,7 @@ python task/assets/generate_mimic_assets.py
 
 METR accepts external task contributions at [taskdev.metr.org](https://taskdev.metr.org/introduction/). Accepted tasks receive payment. The submission checklist requires:
 
-- `standard_version = "0.5.0"` in the TaskFamily class
+- `standard_version = "0.3.0"` in the TaskFamily class
 - At least two task variants
 - All pytest tests passing
 - `manifest.yaml` with resource specs

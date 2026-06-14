@@ -1,7 +1,7 @@
 """
 tests/test_task.py
 ==================
-METR Task Standard v0.5.0 — required test categories:
+METR Task Standard v0.3.0 — required test categories:
   1. Structural  — schema, fields, instructions
   2. Scoring     — reference/wrong/None/edge-case submissions
   3. Environment — assets on disk, models load, start() logic, CSV shapes
@@ -50,7 +50,7 @@ def perfect_submission(t):
 class TestStructural:
 
     def test_standard_version(self):
-        assert TaskFamily.standard_version == "0.5.0"
+        assert TaskFamily.standard_version == "0.3.0"
 
     def test_get_tasks_returns_nonempty_dict(self):
         assert isinstance(TASKS, dict)
