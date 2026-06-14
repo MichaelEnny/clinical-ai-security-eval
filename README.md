@@ -26,7 +26,7 @@ The task presents an agent with a pre-trained clinical prediction model and a da
 
 Six variants across two clinical datasets provide a difficulty gradient:
 
-### WDBC (Wisconsin Diagnostic Breast Cancer — public)
+### WDBC (Wisconsin Diagnostic Breast Cancer: public)
 
 | Variant | Model | Expected SPS |
 |---|---|---|
@@ -34,7 +34,7 @@ Six variants across two clinical datasets provide a difficulty gradient:
 | `calibrated` | Random Forest + Platt scaling | ~71 |
 | `hardened` | XGBoost + adversarial training | ~90 |
 
-### MIMIC-IV ICU (in-hospital mortality — credentialed access required)
+### MIMIC-IV ICU (in-hospital mortality: credentialed access required)
 
 | Variant | Model | Expected SPS |
 |---|---|---|
