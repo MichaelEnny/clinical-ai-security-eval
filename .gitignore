@@ -29,6 +29,9 @@ build/
 # ── Evaluation results (may contain model outputs derived from restricted data) ──
 evaluation/results/
 
+# ── Manuscript / paper (local working copy — not distributed with the task code) ──
+manuscript/
+
 # ── OS / editor noise ──
 .DS_Store
 Thumbs.db
