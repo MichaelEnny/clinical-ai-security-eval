@@ -1,0 +1,259 @@
+\begin{thebibliography}{35}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Brendel et~al.(2018)Brendel, Rauber, and Bethge]{brendel2018decision}
+Wieland Brendel, Jonas Rauber, and Matthias Bethge.
+\newblock Decision-based adversarial attacks: Reliable attacks against
+  black-box machine learning models.
+\newblock In \emph{International Conference on Learning Representations}, 2018.
+
+\bibitem[Carlini and Wagner(2017)]{carlini2017evaluating}
+Nicholas Carlini and David Wagner.
+\newblock Towards evaluating the robustness of neural networks.
+\newblock In \emph{{IEEE} Symposium on Security and Privacy}, pages 39--57,
+  2017.
+
+\bibitem[Carlini et~al.(2022)Carlini, Chien, Nasr, Song, Terzis, and
+  Tramer]{carlini2022membership}
+Nicholas Carlini, Steve Chien, Milad Nasr, Shuang Song, Andreas Terzis, and
+  Florian Tramer.
+\newblock Membership inference attacks from first principles.
+\newblock In \emph{{IEEE} Symposium on Security and Privacy}, pages 1897--1914,
+  2022.
+
+\bibitem[Char et~al.(2018)Char, Shah, and Magnus]{char2018implementing}
+Danton~S Char, Nigam~H Shah, and David Magnus.
+\newblock Implementing machine learning in health care---addressing ethical
+  challenges.
+\newblock \emph{New England Journal of Medicine}, 378\penalty0 (11):\penalty0
+  981--983, 2018.
+
+\bibitem[Chen and Guestrin(2016)]{chen2016xgboost}
+Tianqi Chen and Carlos Guestrin.
+\newblock {XGBoost}: A scalable tree boosting system.
+\newblock In \emph{{ACM SIGKDD} International Conference on Knowledge Discovery
+  and Data Mining}, pages 785--794, 2016.
+
+\bibitem[Dua and Graff(2019)]{dua2019uci}
+Dheeru Dua and Casey Graff.
+\newblock {UCI} machine learning repository.
+\newblock \url{http://archive.ics.uci.edu/ml}, 2019.
+
+\bibitem[Eniolade(2026)]{eniolade2026security}
+Michael~O. Eniolade.
+\newblock Security posture scoring for clinical {AI} systems: A multi-attack
+  adversarial evaluation framework.
+\newblock \emph{Preprint}, 2026.
+\newblock University of the Cumberlands.
+
+\bibitem[Finlayson et~al.(2019)Finlayson, Bowers, Ito, Zittrain, Beam, and
+  Kohane]{finlayson2019adversarial}
+Samuel~G Finlayson, John~D Bowers, Joichi Ito, Jonathan~L Zittrain, Andrew~L
+  Beam, and Isaac~S Kohane.
+\newblock Adversarial attacks on medical machine learning.
+\newblock \emph{Science}, 363\penalty0 (6433):\penalty0 1287--1289, 2019.
+
+\bibitem[Goldberger et~al.(2000)Goldberger, Amaral, Glass, Hausdorff, Ivanov,
+  Mark, Mietus, Moody, Peng, and Stanley]{goldberger2000physiobank}
+Ary~L Goldberger, Luis A~N Amaral, Leon Glass, Jeffrey~M Hausdorff, Plamen~Ch
+  Ivanov, Roger~G Mark, Joseph~E Mietus, George~B Moody, Chung-Kang Peng, and
+  H~Eugene Stanley.
+\newblock {PhysioBank}, {PhysioToolkit}, and {PhysioNet}: Components of a new
+  research resource for complex physiologic signals.
+\newblock \emph{Circulation}, 101\penalty0 (23):\penalty0 e215--e220, 2000.
+
+\bibitem[Goodfellow et~al.(2015)Goodfellow, Shlens, and
+  Szegedy]{goodfellow2015explaining}
+Ian~J Goodfellow, Jonathon Shlens, and Christian Szegedy.
+\newblock Explaining and harnessing adversarial examples.
+\newblock In \emph{International Conference on Learning Representations}, 2015.
+
+\bibitem[Guo et~al.(2017)Guo, Pleiss, Sun, and Weinberger]{guo2017calibration}
+Chuan Guo, Geoff Pleiss, Yu~Sun, and Kilian~Q Weinberger.
+\newblock On calibration of modern neural networks.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  1321--1330, 2017.
+
+\bibitem[Hendrycks and Dietterich(2019)]{hendrycks2019benchmarking}
+Dan Hendrycks and Thomas Dietterich.
+\newblock Benchmarking neural network robustness to common corruptions and
+  perturbations.
+\newblock In \emph{International Conference on Learning Representations}, 2019.
+
+\bibitem[Jimenez et~al.(2024)Jimenez, Yang, Wettig, Yao, Pei, Press, and
+  Narasimhan]{jimenez2024swebench}
+Carlos~E Jimenez, John Yang, Alexander Wettig, Shunyu Yao, Kexin Pei, Ofir
+  Press, and Karthik Narasimhan.
+\newblock {SWE-bench}: Can language models resolve real-world {GitHub} issues?
+\newblock In \emph{International Conference on Learning Representations}, 2024.
+
+\bibitem[Johnson et~al.(2023)Johnson, Bulgarelli, Shen, Gayles, Shammout,
+  Horng, Pollard, Hao, Moody, Gow, Lehman, Celi, and Mark]{johnson2023mimic}
+Alistair E~W Johnson, Lucas Bulgarelli, Lu~Shen, Alvin Gayles, Ayad Shammout,
+  Steven Horng, Tom~J Pollard, Sicheng Hao, Benjamin Moody, Brian Gow, Li-Wei~H
+  Lehman, Leo~A Celi, and Roger~G Mark.
+\newblock {MIMIC-IV}, a freely accessible electronic health record dataset.
+\newblock \emph{Scientific Data}, 10\penalty0 (1):\penalty0 1, 2023.
+
+\bibitem[Kinniment et~al.(2023)Kinniment, Sato, Du, Goodrich, Habryka, Barnes,
+  Chan, Denison, Kilov, Langosco, et~al.]{kinniment2023evaluating}
+Megan Kinniment, Lucas Jun~Koba Sato, Haoxing Du, Brian Goodrich, Max Habryka,
+  Samuel Barnes, Lawrence Chan, Carson Denison, Drag Kilov, Lauro Langosco,
+  et~al.
+\newblock Evaluating language-model agents on realistic autonomous tasks.
+\newblock \emph{arXiv preprint arXiv:2312.11671}, 2023.
+
+\bibitem[Liu et~al.(2024)Liu, Yu, Zhang, Xu, Lei, Lai, Gu, Ding, Men, Yang,
+  Zhang, Deng, Zeng, Du, Zhang, et~al.]{liu2024agentbench}
+Xiao Liu, Hao Yu, Hanchen Zhang, Yifan Xu, Xuanyu Lei, Hanyu Lai, Yu~Gu,
+  Hangliang Ding, Kaiwen Men, Ke~Yang, Shudan Zhang, Xiang Deng, Aohan Zeng,
+  Zhengxiao Du, Cheng Zhang, et~al.
+\newblock {AgentBench}: Evaluating {LLMs} as agents.
+\newblock In \emph{International Conference on Learning Representations}, 2024.
+
+\bibitem[Madry et~al.(2018)Madry, Makelov, Schmidt, Tsipras, and
+  Vladu]{madry2018towards}
+Aleksander Madry, Aleksandar Makelov, Ludwig Schmidt, Dimitris Tsipras, and
+  Adrian Vladu.
+\newblock Towards deep learning models resistant to adversarial attacks.
+\newblock In \emph{International Conference on Learning Representations}, 2018.
+
+\bibitem[{METR}(2024)]{metr2024taskstandard}
+{METR}.
+\newblock {METR} task standard v0.5.0.
+\newblock \url{https://github.com/METR/task-standard}, 2024.
+
+\bibitem[Mialon et~al.(2024)Mialon, Fourrier, Swift, Wolf, LeCun, and
+  Scialom]{mialon2024gaia}
+Gr{\'e}goire Mialon, Cl{\'e}mentine Fourrier, Craig Swift, Thomas Wolf, Yann
+  LeCun, and Thomas Scialom.
+\newblock {GAIA}: A benchmark for general {AI} assistants.
+\newblock In \emph{International Conference on Learning Representations}, 2024.
+
+\bibitem[Minderer et~al.(2021)Minderer, Djolonga, Romijnders, Hubis, Zhai,
+  Houlsby, Tran, and Lucic]{minderer2021revisiting}
+Matthias Minderer, Josip Djolonga, Rob Romijnders, Frances Hubis, Xiaohua Zhai,
+  Neil Houlsby, Dustin Tran, and Mario Lucic.
+\newblock Revisiting the calibration of modern neural networks.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~34, pages 15682--15694, 2021.
+
+\bibitem[Niculescu-Mizil and Caruana(2005)]{niculescu2005predicting}
+Alexandru Niculescu-Mizil and Rich Caruana.
+\newblock Predicting good probabilities with supervised learning.
+\newblock In \emph{International Conference on Machine Learning}, pages
+  625--632, 2005.
+
+\bibitem[Obermeyer and Emanuel(2016)]{obermeyer2016predicting}
+Ziad Obermeyer and Ezekiel~J Emanuel.
+\newblock Predicting the future---big data, machine learning, and clinical
+  medicine.
+\newblock \emph{New England Journal of Medicine}, 375\penalty0 (13):\penalty0
+  1216--1219, 2016.
+
+\bibitem[Papernot et~al.(2016)Papernot, McDaniel, Jha, Fredrikson, Celik, and
+  Swami]{papernot2016limitations}
+Nicolas Papernot, Patrick McDaniel, Somesh Jha, Matt Fredrikson, Z~Berkay
+  Celik, and Ananthram Swami.
+\newblock The limitations of deep learning in adversarial settings.
+\newblock In \emph{{IEEE} European Symposium on Security and Privacy}, pages
+  372--387, 2016.
+
+\bibitem[Papernot et~al.(2018)Papernot, McDaniel, Sinha, and
+  Wellman]{papernot2018sok}
+Nicolas Papernot, Patrick McDaniel, Arunesh Sinha, and Michael~P Wellman.
+\newblock {SoK}: Security and privacy in machine learning.
+\newblock In \emph{{IEEE} European Symposium on Security and Privacy}, pages
+  399--414, 2018.
+
+\bibitem[Pedregosa et~al.(2011)Pedregosa, Varoquaux, Gramfort, Michel, Thirion,
+  Grisel, Blondel, Prettenhofer, Weiss, Dubourg, Vanderplas, Passos,
+  Cournapeau, Brucher, Perrot, and Duchesnay]{pedregosa2011scikit}
+Fabian Pedregosa, Ga{\"e}l Varoquaux, Alexandre Gramfort, Vincent Michel,
+  Bertrand Thirion, Olivier Grisel, Mathieu Blondel, Peter Prettenhofer, Ron
+  Weiss, Vincent Dubourg, Jake Vanderplas, Alexandre Passos, David Cournapeau,
+  Matthieu Brucher, Matthieu Perrot, and {\'E}douard Duchesnay.
+\newblock Scikit-learn: Machine learning in {Python}.
+\newblock \emph{Journal of Machine Learning Research}, 12:\penalty0 2825--2830,
+  2011.
+
+\bibitem[Platt(1999)]{platt1999probabilistic}
+John~C Platt.
+\newblock Probabilistic outputs for support vector machines and comparisons to
+  regularized likelihood methods.
+\newblock In \emph{Advances in Large Margin Classifiers}, pages 61--74. {MIT}
+  Press, 1999.
+
+\bibitem[Rajpurkar et~al.(2022)Rajpurkar, Chen, Banerjee, and
+  Topol]{rajpurkar2022ai}
+Pranav Rajpurkar, Emma Chen, Oishi Banerjee, and Eric~J Topol.
+\newblock {AI} in health and medicine.
+\newblock \emph{Nature Medicine}, 28:\penalty0 31--38, 2022.
+
+\bibitem[Schick et~al.(2023)Schick, Dwivedi-Yu, Dess{\`i}, Raileanu, Lomeli,
+  Zettlemoyer, Cancedda, and Scialom]{schick2023toolformer}
+Timo Schick, Jane Dwivedi-Yu, Roberto Dess{\`i}, Roberta Raileanu, Maria
+  Lomeli, Luke Zettlemoyer, Nicola Cancedda, and Thomas Scialom.
+\newblock Toolformer: Language models can teach themselves to use tools.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~36, 2023.
+
+\bibitem[Shokri et~al.(2017)Shokri, Stronati, Song, and
+  Shmatikov]{shokri2017membership}
+Reza Shokri, Marco Stronati, Congzheng Song, and Vitaly Shmatikov.
+\newblock Membership inference attacks against machine learning models.
+\newblock In \emph{{IEEE} Symposium on Security and Privacy}, pages 3--18,
+  2017.
+
+\bibitem[Szegedy et~al.(2014)Szegedy, Zaremba, Sutskever, Bruna, Erhan,
+  Goodfellow, and Fergus]{szegedy2014intriguing}
+Christian Szegedy, Wojciech Zaremba, Ilya Sutskever, Joan Bruna, Dumitru Erhan,
+  Ian Goodfellow, and Rob Fergus.
+\newblock Intriguing properties of neural networks.
+\newblock In \emph{International Conference on Learning Representations}, 2014.
+
+\bibitem[Topol(2019)]{topol2019high}
+Eric~J Topol.
+\newblock High-performance medicine: The convergence of human and artificial
+  intelligence.
+\newblock \emph{Nature Medicine}, 25\penalty0 (1):\penalty0 44--56, 2019.
+
+\bibitem[Wei et~al.(2022)Wei, Wang, Schuurmans, Bosma, Ichter, Xia, Chi, Le,
+  and Zhou]{wei2022chain}
+Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia,
+  Ed~Chi, Quoc Le, and Denny Zhou.
+\newblock Chain-of-thought prompting elicits reasoning in large language
+  models.
+\newblock In \emph{Advances in Neural Information Processing Systems},
+  volume~35, pages 24824--24837, 2022.
+
+\bibitem[Wiens et~al.(2019)Wiens, Saria, Sendak, Ghassemi, Liu, Doshi-Velez,
+  Jung, Heller, Kale, Saeed, Ossorio, Thadaney-Israni, and
+  Goldenberg]{wiens2019no}
+Jenna Wiens, Suchi Saria, Mark Sendak, Marzyeh Ghassemi, Vincent~X Liu, Finale
+  Doshi-Velez, Kenneth Jung, Katherine Heller, David Kale, Mohammed Saeed,
+  Pilar~N Ossorio, Sonoo Thadaney-Israni, and Anna Goldenberg.
+\newblock Do no harm: A roadmap for responsible machine learning for health
+  care.
+\newblock \emph{Nature Medicine}, 25\penalty0 (9):\penalty0 1337--1340, 2019.
+
+\bibitem[Yao et~al.(2023)Yao, Zhao, Yu, Du, Shafran, Narasimhan, and
+  Cao]{yao2023react}
+Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan,
+  and Yuan Cao.
+\newblock {ReAct}: Synergizing reasoning and acting in language models.
+\newblock In \emph{International Conference on Learning Representations}, 2023.
+
+\bibitem[Yeom et~al.(2018)Yeom, Giacomelli, Fredrikson, and
+  Jha]{yeom2018privacy}
+Samuel Yeom, Irene Giacomelli, Matt Fredrikson, and Somesh Jha.
+\newblock Privacy risk in machine learning: Analyzing connections to
+  overfitting.
+\newblock In \emph{{IEEE} Computer Security Foundations Symposium}, pages
+  268--282, 2018.
+
+\end{thebibliography}

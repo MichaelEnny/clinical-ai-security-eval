@@ -3,7 +3,7 @@
 A METR Task Standard v0.5.0 evaluation task that tests whether frontier AI agents can autonomously perform clinical AI security auditing by computing a reproducible **Security Posture Score (SPS)** across four adversarial attack dimensions.
 
 **Author:** Michael O. Eniolade, University of the Cumberlands  
-**Paper:** _Evaluating Frontier AI Agents as Autonomous Clinical Security Auditors_ (arXiv, forthcoming)
+**Paper:** _Evaluating Frontier AI Agents as Autonomous Clinical Security Auditors_ (arXiv preprint, June 2026)
 
 ---
 
@@ -48,14 +48,15 @@ MIMIC-IV data requires PhysioNet credentialed access. WDBC variants run fully on
 
 ## Evaluation Results
 
-Evaluated against Claude Sonnet 4-6 and GPT-4o.
+Full evaluation: 54 runs across three frontier models (3 runs × 6 variants × 3 models), June 2026.
 
-| Model | Variants Completed | Mean Score | Avg Turns |
-|---|---|---|---|
-| Claude Sonnet 4-6 | 6 / 6 (100%) | 1.00 | 5.7 |
-| GPT-4o | 1 / 3 WDBC (33%) | 1.00 where completed | 15 |
+| Model | Runs Completed | Mean Score | Avg Turns | Total Input Tokens |
+|---|---|---|---|---|
+| Claude Sonnet 4.6 | 18 / 18 (100%) | 1.00 | 4.7 | 608K |
+| GPT-4.1 | 18 / 18 (100%) | 1.00 | 10.4 | 1,425K |
+| GPT-4o | 11 / 18 (61%) | 0.63 | 16.9 | 3,034K |
 
-GPT-4o failed to produce a submission on the `baseline` and `calibrated` WDBC variants. On `hardened`, it required 20 tool calls vs. 3 for Claude. MIMIC variants were not run with GPT-4o.
+Claude Sonnet 4.6 produced identical SPS values across all three runs on every variant (σ = 0.00). GPT-4.1 showed minor variance on two MIMIC variants due to stochastic shadow-model construction. GPT-4o exhibited three distinct failure modes: context exhaustion before file writing (5 runs), an arithmetic error in weighted SPS aggregation (1 run, score 0.4), and an empty submission file (1 run, score 0.0). GPT-4o consumed approximately 5× more input tokens per run than Claude despite a lower completion rate.
 
 ---
 
@@ -151,11 +152,11 @@ Scoring tolerance: ±5 SPS points, ±0.10 per component.
 
 ```bash
 # Requires ANTHROPIC_API_KEY or OPENAI_API_KEY set in environment
-python evaluation/run_eval.py --model claude-sonnet-4-6 --variants baseline calibrated hardened
-python evaluation/run_eval.py --model claude-sonnet-4-6 --variants mimic_baseline mimic_calibrated mimic_hardened
+python evaluation/run_eval.py --model claude-sonnet-4.6 --variants baseline calibrated hardened
+python evaluation/run_eval.py --model claude-sonnet-4.6 --variants mimic_baseline mimic_calibrated mimic_hardened
 
 # Analyze results
-python evaluation/analyze_results.py evaluation/results/eval_claude-sonnet-4-6_<timestamp>.json
+python evaluation/analyze_results.py evaluation/results/eval_claude-sonnet-4.6_<timestamp>.json
 ```
 
 ---
